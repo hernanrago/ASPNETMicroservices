@@ -4,18 +4,57 @@ version: '3.4'
 
 services:
   catalogdb:
-    container_name: catalogdb
     restart: always
     ports:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
 
-  catalogapi:
-    image: catalogapi
-    build:
-      context: .
-      dockerfile: Services/Catalog/Catalog.API/Dockerfile
+  basketdb:
+    restart: always
+    ports:
+      - "6379:6379"
+
+  discountdb:
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=DiscountDb
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  orderdb:
+    container_name: orderdb
+    environment:
+      SA_PASSWORD: "pa55w0rd!"
+      ACCEPT_EULA: "Y"
+    restart: always
+    ports:
+      - "1433:1433"
+
+  pgadmin:
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=admin@aspnetrun.com
+      - PGADMIN_DEFAULT_PASSWORD=admin1234
+    restart: always
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/root/.pgadmin
+
+  portainer:
+    restart: always
+    ports:
+      - "8080:8000"
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer_data:/data
+
+  catalog.api:
     ports:
       - "8000:80"
     environment:
@@ -25,3 +64,34 @@ services:
       - catalogdb
     volumes:
       - ~/.vsdbg:/remote_debugger:rw
+
+  basket.api:
+    ports:
+      - "8001:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "CacheSettings:ConnectionString=basketdb:6379"
+      - "GrpcSettings:DiscountUrl=http://discount.grpc"
+    depends_on:
+      - basketdb
+
+  discount.api:
+    ports:
+      - "8002:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234"
+    depends_on:
+      - discountdb
+
+  discount.grpc:
+    ports:
+      - "8003:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=Server=discountdb;Port=5432;Database=DiscountDb;User Id=admin;Password=admin1234"
+    depends_on:
+      - discountdb
+
+
+

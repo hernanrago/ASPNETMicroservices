@@ -826,19 +826,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+      "projectUniqueName": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
       "projectName": "Catalog.API",
-      "projectPath": "c:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+      "projectPath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
       "packagesPath": "C:\\Users\\hernan.rago\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\obj\\",
+      "outputPath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hernan.rago\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\hernan.rago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -884,7 +886,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }

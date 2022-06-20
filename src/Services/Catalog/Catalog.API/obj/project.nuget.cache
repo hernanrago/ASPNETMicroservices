@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mRswL4LvdTqXsAjzfurywFLqyX4U06+eAicI0J+5Lbv/U/Fi81ilhXKUxR6xhJj8ctdZqGJ1z/Lu43eTccWI4Q==",
+  "dgSpecHash": "X9nDaKtEGAgJopaTWWwscGVQog9c/CvTD/T6RblKWN64wKF643lF8DGU+IuA89q9XUFX7+TkfjqJlNG3/To9xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
   "expectedPackageFiles": [
