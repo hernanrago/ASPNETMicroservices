@@ -46,7 +46,7 @@ namespace Ordering.API.Controllers
             return NoContent();
         }
 
-               [HttpDelete]
+        [HttpDelete]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Delete(DeleteOrderCommand command)
