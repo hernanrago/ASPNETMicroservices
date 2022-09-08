@@ -20,5 +20,5 @@ dotnet_naming_rule.private_fields_underscored.severity = error
 
 # Define the 'private_static_fields_none' naming rule
 dotnet_naming_rule.private_static_fields_none.symbols = private_static_fields
-dotnet_naming_rule.private_static_fields_none.style = underscored
 dotnet_naming_rule.private_static_fields_none.severity = none
+dotnet_naming_rule.private_static_fields_none.style = underscored
