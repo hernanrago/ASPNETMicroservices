@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H7plwODDmg2OdV77CMuNJnmDHdezJfW+4NTB9FH9Bi9I2d8Netr0IoCL9IkN6jNkatLtWplwzh+TNzyWF/CpLQ==",
+  "dgSpecHash": "oxj/+Qs7rV//xKLVGnCzN8Vta00FZuJYRlYMkgMI0jCbjgb0xExXdkNkpYl/3WtiXMoGCu6IoWmG41oaDTI4qA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+  "projectFilePath": "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hernan.rago\\.nuget\\packages\\dnsclient\\1.6.0\\dnsclient.1.6.0.nupkg.sha512",
     "C:\\Users\\hernan.rago\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

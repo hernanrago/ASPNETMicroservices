@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {}
+    "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {
+    "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+        "projectUniqueName": "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
         "projectName": "Catalog.API",
-        "projectPath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
+        "projectPath": "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\Catalog.API.csproj",
         "packagesPath": "C:\\Users\\hernan.rago\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hernan.rago\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\obj\\",
+        "outputPath": "C:\\Users\\hernan.rago\\OneDrive\\Repository\\aspnetmicroservices\\src\\Services\\Catalog\\Catalog.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\hernan.rago\\AppData\\Roaming\\NuGet\\NuGet.Config",

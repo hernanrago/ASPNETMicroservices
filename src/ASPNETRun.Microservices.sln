@@ -35,11 +35,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus.Messages", "Buildi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways", "{40E387FD-73FC-4092-984D-AD68B3F92495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotApiGw", "ApiGateway\OcelotApiGw\OcelotApiGw.csproj", "{3F3ACDA7-6A1A-4DF5-B195-76E754AE027B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotApiGw", "ApiGateway\OcelotApiGw\OcelotApiGw.csproj", "{3F3ACDA7-6A1A-4DF5-B195-76E754AE027B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{B7284C84-94F3-4BCF-BFCF-D4A8032426E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shopping.Aggregator", "ApiGateway\Shopping.Aggregator\Shopping.Aggregator.csproj", "{99B0DA76-0D10-4C45-AAB7-112BAD51780A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shopping.Aggregator", "ApiGateway\Shopping.Aggregator\Shopping.Aggregator.csproj", "{99B0DA76-0D10-4C45-AAB7-112BAD51780A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApps", "WebApps", "{4500A964-77DE-4D8C-AA83-EB2F5CAB699E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspnetRunBasics", "WebApps\AspnetRunBasics\AspnetRunBasics.csproj", "{52DDA3D3-3DF9-42F2-B973-3E505FEE5594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,10 @@ Global
 		{99B0DA76-0D10-4C45-AAB7-112BAD51780A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99B0DA76-0D10-4C45-AAB7-112BAD51780A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99B0DA76-0D10-4C45-AAB7-112BAD51780A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52DDA3D3-3DF9-42F2-B973-3E505FEE5594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52DDA3D3-3DF9-42F2-B973-3E505FEE5594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52DDA3D3-3DF9-42F2-B973-3E505FEE5594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52DDA3D3-3DF9-42F2-B973-3E505FEE5594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -111,6 +119,7 @@ Global
 		{3C483F26-6B54-45DD-B0B8-A3FC15C048B4} = {FC632419-191E-4A72-A5A2-D27B6213F45E}
 		{3F3ACDA7-6A1A-4DF5-B195-76E754AE027B} = {40E387FD-73FC-4092-984D-AD68B3F92495}
 		{99B0DA76-0D10-4C45-AAB7-112BAD51780A} = {B7284C84-94F3-4BCF-BFCF-D4A8032426E9}
+		{52DDA3D3-3DF9-42F2-B973-3E505FEE5594} = {4500A964-77DE-4D8C-AA83-EB2F5CAB699E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DC1C9B32-BF30-48FC-8215-8E32DB057726}
