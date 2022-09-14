@@ -43,23 +43,34 @@ namespace AspnetRunBasics
 
         public async Task<IActionResult> OnPostAddToCartAsync(string productId)
         {
-            var product = await _catalogService.GetCatalog(productId);
+            CatalogModel product = await _catalogService.GetCatalog(productId);
 
-            var userName = "pepe";
-            var basket = await _basketService.GetBasket(userName);
+            string userName = "pepe";
 
-            basket.Items.Add(new BasketItemExtendedModel
+            BasketModel basket = await _basketService.GetBasket(userName);
+
+            BasketItemExtendedModel item = basket.Items.FirstOrDefault(i => i.ProductId == productId);
+
+            if (item != default)
             {
-                ProductId = productId,
-                ProductName = product.Name,
-                Price = product.Price,
-                Quantity = 1,
-                Color = "black"
-            });
+                item.Quantity++;
+            }
+            else
+            {
+                basket.Items.Add(new BasketItemExtendedModel
+                {
+                    ProductId = productId,
+                    ProductName = product.Name,
+                    Price = product.Price,
+                    Quantity = 1,
+                    Color = "black"
+                });
+            }
 
-            var basketUpdated = await _basketService.UpdateBasket(basket);
+            BasketModel basketUpdated = await _basketService.UpdateBasket(basket);
 
             return RedirectToPage("Cart");
+
         }
     }
 }
