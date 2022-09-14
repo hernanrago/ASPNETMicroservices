@@ -1,23 +1,18 @@
-using AspnetRunBasics.Data;
-using AspnetRunBasics.Repositories;
-using Microsoft.EntityFrameworkCore;
+using AspnetRunBasics.Services;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-builder.Services.AddDbContext<AspnetRunContext>(c => c.UseSqlServer(builder.Configuration.GetConnectionString("AspnetRunConnection")));
+builder.Services.AddHttpClient<ICatalogService, CatalogService>(c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]));
 
-// add repository dependecy
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<ICartRepository, CartRepository>();
-builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-builder.Services.AddScoped<IContactRepository, ContactRepository>();
+builder.Services.AddHttpClient<IBasketService, BasketService>(c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]));
+
+builder.Services.AddHttpClient<IOrderService, OrderService>(c => c.BaseAddress = new Uri(builder.Configuration["ApiSettings:GatewayAddress"]));
+
 
 WebApplication app = builder.Build();
-
-SeedDatabase(app);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -37,24 +32,3 @@ app.UseAuthorization();
 app.MapRazorPages();
 
 app.Run();
-
-static void SeedDatabase(WebApplication app)
-{
-    using (var scope = app.Services.CreateScope())
-    {
-        var services = scope.ServiceProvider;
-        var loggerFactory = services.GetRequiredService<ILoggerFactory>();
-
-        try
-        {
-            var aspnetRunContext = services.GetRequiredService<AspnetRunContext>();
-
-            AspnetRunContextSeed.SeedAsync(aspnetRunContext, loggerFactory).Wait();
-        }
-        catch (Exception exception)
-        {
-            var logger = loggerFactory.CreateLogger<Program>();
-            logger.LogError(exception, "An error occurred seeding the DB.");
-        }
-    }
-}
